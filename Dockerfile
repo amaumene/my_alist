@@ -30,7 +30,7 @@ COPY --chown=65532 --from=builder /app/alist /app/alist
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
-VOLUME /app/data
+VOLUME /data
 
 EXPOSE 5244/tcp
 
