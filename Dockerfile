@@ -2,7 +2,8 @@ FROM golang AS builder
 
 WORKDIR /app
 
-RUN curl -s https://api.github.com/repos/AlistGo/alist/releases/latest | grep 'tarball_url' | cut -d '"' -f 4 | xargs curl -L -o alist.tar.gz
+#RUN curl -s https://api.github.com/repos/AlistGo/alist/releases/latest | grep 'tarball_url' | cut -d '"' -f 4 | xargs curl -L -o alist.tar.gz
+RUN curl -s https://codeload.github.com/AlistGo/alist/tar.gz/refs/tags/v3.37.4 -o alist.tar.gz
 
 RUN tar xvaf alist.tar.gz -C . --strip-components=1
 
