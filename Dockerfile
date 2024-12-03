@@ -34,4 +34,4 @@ VOLUME /app/data
 
 EXPOSE 5244/tcp
 
-CMD [ "/app/alist" ]
+CMD [ "/app/alist", "server" ]
